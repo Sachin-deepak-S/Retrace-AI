@@ -1,0 +1,153 @@
+/* Premium Dark Theme - Black + Gold */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0a0a;
+  color: #fff;
+  height: 100vh;
+}
+
+.signup-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* LEFT SECTION */
+.left-section {
+  flex: 1;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80")
+      center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: gold;
+  margin-bottom: 40px;
+}
+
+.text-content h1 {
+  font-size: 2.5rem;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.text-content ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.text-content li {
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* RIGHT SECTION */
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+}
+
+.form-card {
+  background-color: #1a1a1a;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 30px rgba(255, 215, 0, 0.2);
+  width: 360px;
+}
+
+.form-card h2 {
+  text-align: center;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+input:focus {
+  border-color: gold;
+  outline: none;
+  box-shadow: 0 0 6px gold;
+}
+
+.password-hint {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: gold;
+  border: none;
+  color: #111;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #d4af37;
+  transform: scale(1.02);
+}
+
+.message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.terms {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.terms span {
+  color: gold;
+  cursor: pointer;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-text a {
+  color: gold;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
