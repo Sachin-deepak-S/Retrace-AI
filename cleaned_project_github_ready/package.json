@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev-server": "cd server && npm run dev",
+    "dev-client": "cd client && npm run dev",
+    "dev-all": "concurrently \"npm run dev-server\" \"npm run dev-client\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.545.0"
+  }
+}
