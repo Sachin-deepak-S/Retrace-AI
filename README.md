@@ -71,27 +71,35 @@ retrace-ai/
 ├── client/        # React frontend
 ├── server/        # Node.js backend (APIs, auth, integrations)
 └── ml/            # FastAPI ML microservice (Phase 2 processing)
-📦 Installation & Setup
+```
+---
+##📦 Installation & Setup
 1️⃣ Server Dependencies
-Bash
+
+```bash
 
 cd server
 npm install
+```
 2️⃣ Client Dependencies
-Bash
+
+```Bash
 
 cd client
 npm install
+```
 3️⃣ ML Service Dependencies
-Bash
+```Bash
 
 cd ml
 pip install -r requirements.txt
+```
+---
 🔐 Environment Variables
 Create a .env file in the server/ directory and add the following configurations:
 
-Code snippet
 
+```Bash
 PORT=5000
 JWT_SECRET=your_secret_key_here
 MONGODB_URI=mongodb://127.0.0.1:27017/retrace_ai
@@ -108,25 +116,31 @@ SIGHTENGINE_API_SECRET=your_sightengine_secret
 
 # ML Service Connection
 ML_SERVER_URL=[http://127.0.0.1:8000](http://127.0.0.1:8000)
-▶️ How to Run
+```
+---
+##▶️ How to Run
 Run each component in a separate terminal window.
 
 1. Start the ML Server
-Bash
+```Bash
 
 cd ml
 uvicorn serve_v2:app --reload --host 0.0.0.0 --port 8000
+```
 2. Start the Backend
-Bash
+```Bash
 
 cd server
 npm start
+```
 3. Start the Frontend
-Bash
+```Bash
 
 cd client
 npm start
-📊 Output / Report Includes
+```
+---
+##📊 Output / Report Includes
 The system generates a comprehensive report containing:
 
 Safety Status (NSFW, Violence, Harmful).
@@ -144,8 +158,8 @@ Metadata & EXIF Data.
 Watermark Detection.
 
 Quality & Enhancement Suggestions.
-
-🛡️ Security & Privacy
+---
+##🛡️ Security & Privacy
 Local Processing: Files are processed locally unless external APIs are required.
 
 No Permanent Storage: Uploaded media is not permanently stored after analysis.
@@ -156,5 +170,5 @@ Verification: Email verification and reCAPTCHA-protected signup.
 
 Secure Communication: Encrypted server-to-ML communication.
 
-📘 License
+##📘 License
 This project is provided for educational and research purposes only.
