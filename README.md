@@ -158,6 +158,7 @@ Metadata & EXIF Data.
 Watermark Detection.
 
 Quality & Enhancement Suggestions.
+
 ---
 ## 🛡️ Security & Privacy
 Local Processing: Files are processed locally unless external APIs are required.
