@@ -1,99 +1,107 @@
 ReTrace AI — Image & Video Authenticity Analysis
 
-ReTrace AI is an advanced media-forensics system that analyzes images and videos to detect AI-generated content, deepfakes, manipulations, edits, watermarks, NSFW content, and authenticity signals. It provides detailed analysis reports using a hybrid approach powered by external AI APIs and a custom ML pipeline.
+ReTrace AI is an advanced media forensics system designed to analyze images and videos for authenticity. It detects AI-generated content, deepfakes, manipulations, NSFW content, watermarks, metadata inconsistencies, and more.
+Built with a hybrid system combining custom ML models, FastAPI, Node.js, and external AI APIs, ReTrace AI delivers highly accurate authenticity reports.
 
-🚀 Features
+🚀 Key Features
 ✅ Phase 1 — Safety Screening
 
 NSFW content detection
 
-Violence, explicit or harmful content identification
+Violence / harmful imagery detection
 
-Safe/Unsafe classification
+Safe vs Unsafe classification
 
-Immediate block if unsafe
+Automatic blocking of unsafe media
 
 ✅ Phase 2 — Authenticity Analysis
 
-AI-generated image detection
+AI-generated vs Real image detection
 
-Deepfake detection
+Deepfake identification
 
-Manipulated image detection
+Manipulated / edited image detection
 
-Edit/Filter/Enhancement detection
+Filter / enhancement / retouching detection
 
-Watermark detection and source tracing
+Watermark detection & source tracing
 
-Metadata extraction (EXIF, software, location, device)
+Full metadata extraction (EXIF, device, software, GPS)
 
-Quality scoring & enhancement suggestions
+Authenticity scoring + quality insights
 
-✅ Phase 3 — External AI API Enhancements
+✅ Phase 3 — Enhanced External API Intelligence
 
-Powered by:
+Powered by industry-grade APIs:
 
 Google Vision API
 
-Hive AI API (deepfake + AI-generated detection)
+Hive AI (deepfake + AI-generated detection)
 
-SightEngine / NSFW API
-Results combined intelligently for maximum accuracy.
+SightEngine (NSFW & content safety)
 
-🧠 Custom ML FastAPI Server
+All results are automatically merged for maximum accuracy.
 
-Runs custom PyTorch model
+🧠 Custom ML Engine (FastAPI + PyTorch)
 
-Provides authenticity score
+Runs custom CNN / ResNet50-based model
 
-Optional Grad-CAM heatmaps
+Provides authenticity probability score
 
-Video frame extraction and analysis
+Grad-CAM visualization (optional)
 
-🖥️ Frontend (React)
+Video frame extraction & sequential analysis
 
-Login / Signup with JWT
+Fully container-ready ML microservice
 
-reCAPTCHA protection
+🖥️ Frontend (React.js)
 
-Drag-and-drop file upload
+JWT-based login/signup
 
-Real-time progress updates
+Google reCAPTCHA protection
 
-NSFW gatekeeper → stops unsafe files
+Drag & drop file upload
 
-Final Results Page
+Real-time analysis progress
 
-Upload history, profile, and UI animations
+NSFW gatekeeper
 
-🔧 Backend (Node + Express)
+Clean Final Result UI
+
+Upload history + profile page
+
+Smooth animations using Framer Motion
+
+🔧 Backend (Node.js + Express)
 
 JWT authentication
 
-Email verification
+Email verification via Nodemailer
 
-Secure file uploads (multer)
+Secure file uploads (Multer)
 
-Connects React → Node → FastAPI → External APIs
+MongoDB database integration
 
-Central result aggregation
+Routes → ML server → external APIs
+
+Centralized result aggregation
 
 📁 Project Structure
-editoai/
-├── client/              # React frontend
-├── server/              # Node.js backend + API integrations
-└── ml/                  # FastAPI ML service (Phase 2)
+retrace-ai/
+├── client/        # React frontend
+├── server/        # Node.js backend (APIs, auth, integrations)
+└── ml/            # FastAPI ML microservice (Phase 2 processing)
 
 🛠 Tech Stack
 Frontend
 
 React.js
 
-Framer Motion
-
 Axios
 
 React Router
+
+Framer Motion
 
 Backend
 
@@ -103,11 +111,9 @@ Express.js
 
 MongoDB + Mongoose
 
-Multer file uploads
+Multer (file handling)
 
-JWT authentication
-
-Nodemailer
+JWT / Nodemailer
 
 Machine Learning
 
@@ -117,32 +123,32 @@ PyTorch
 
 OpenCV
 
-Custom CNN / ResNet50
+ResNet50 / Custom CNN
 
-Grad-CAM visualization
+Grad-CAM
 
 External APIs
 
 Google Vision API
 
-Hive AI API
+Hive AI
 
-SightEngine NSFW API
+SightEngine (NSFW)
 
-📦 Setup Instructions
-1️⃣ Install server dependencies
+📦 Installation & Setup
+1️⃣ Server Dependencies
 cd server
 npm install
 
-2️⃣ Install client dependencies
+2️⃣ Client Dependencies
 cd client
 npm install
 
-3️⃣ Install ML service dependencies
+3️⃣ ML Service Dependencies
 cd ml
 pip install -r requirements.txt
 
-4️⃣ Configure environment variables (server/.env)
+🔐 Environment Variables (server/.env)
 PORT=5000
 JWT_SECRET=your_secret
 MONGODB_URI=mongodb://127.0.0.1:27017/retrace_ai
@@ -151,57 +157,59 @@ GOOGLE_VISION_API_KEY=xxxx
 HIVE_API_KEY=xxxx
 HIVE_API_SECRET=xxxx
 NSFW_API_KEY=xxxx
+
 SIGHTENGINE_API_USER=xxxx
 SIGHTENGINE_API_SECRET=xxxx
 
 ML_SERVER_URL=http://127.0.0.1:8000
 
-5️⃣ Run the ML service
+▶️ How to Run
+1️⃣ Start the ML Server
 cd ml
 uvicorn serve_v2:app --reload --host 0.0.0.0 --port 8000
 
-6️⃣ Run the server
+2️⃣ Start the Backend
 cd server
 npm start
 
-7️⃣ Run the client
+3️⃣ Start the Frontend
 cd client
 npm start
 
-📊 Output
+📊 Output / Report Includes
 
-ReTrace AI returns a full authenticity report including:
-
-NSFW / Safety
+Safety status (NSFW, violence, harmful content)
 
 AI-generated probability
 
 Deepfake probability
 
-Manipulation probability
+Manipulation/editing detection
 
-Edit/filter detection
+Filter/enhancement identification
 
-Metadata extraction
+Metadata & EXIF extraction
 
-Watermark result
+Watermark detection results
 
-Enhancement suggestions
+Quality & enhancement suggestions
 
-All results are displayed cleanly on the Results Page.
+Full result summary on the UI
 
 🛡️ Security & Privacy
 
-Files processed locally (unless API requested)
+Files processed locally unless APIs are required
 
-No file permanently stored
+No permanent storage of uploaded media
 
 JWT-protected backend routes
 
-reCAPTCHA protected signup
+reCAPTCHA-protected signup
 
-Email verification
+Email verification required
+
+Secure server-to-ML communication
 
 📘 License
 
-This project is for educational and research purposes.
+This project is provided for educational and research purposes only.
