@@ -73,7 +73,7 @@ retrace-ai/
 └── ml/            # FastAPI ML microservice (Phase 2 processing)
 ```
 ---
-##📦 Installation & Setup
+## 📦 Installation & Setup
 1️⃣ Server Dependencies
 
 ```bash
@@ -95,7 +95,7 @@ cd ml
 pip install -r requirements.txt
 ```
 ---
-🔐 Environment Variables
+## 🔐 Environment Variables
 Create a .env file in the server/ directory and add the following configurations:
 
 
@@ -118,7 +118,7 @@ SIGHTENGINE_API_SECRET=your_sightengine_secret
 ML_SERVER_URL=[http://127.0.0.1:8000](http://127.0.0.1:8000)
 ```
 ---
-##▶️ How to Run
+## ▶️ How to Run
 Run each component in a separate terminal window.
 
 1. Start the ML Server
@@ -140,7 +140,7 @@ cd client
 npm start
 ```
 ---
-##📊 Output / Report Includes
+## 📊 Output / Report Includes
 The system generates a comprehensive report containing:
 
 Safety Status (NSFW, Violence, Harmful).
@@ -159,7 +159,7 @@ Watermark Detection.
 
 Quality & Enhancement Suggestions.
 ---
-##🛡️ Security & Privacy
+## 🛡️ Security & Privacy
 Local Processing: Files are processed locally unless external APIs are required.
 
 No Permanent Storage: Uploaded media is not permanently stored after analysis.
@@ -170,5 +170,5 @@ Verification: Email verification and reCAPTCHA-protected signup.
 
 Secure Communication: Encrypted server-to-ML communication.
 
-##📘 License
+## 📘 License
 This project is provided for educational and research purposes only.
